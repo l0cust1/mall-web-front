@@ -1,0 +1,24 @@
+# 依赖包
+node_modules/
+
+# 打包产物dist（打包后的静态文件，平台自动build，不上传源码仓库）
+dist/
+
+# 环境文件（里面放后端接口地址！不要提交到github）
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE
+.vscode/
+.idea/
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db

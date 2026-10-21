@@ -1,0 +1,112 @@
+﻿/* 自定义全局样式 */
+:root {
+  --color-primary: #ff6b35;
+  --color-primary-dark: #e55a2b;
+  --color-primary-light: #ff8c5a;
+  --color-secondary: #1f2937; /* 更柔和的深色 */
+  --color-accent: #ffd700;
+  --color-bg: #f7f7f8; /* 稍微统一底色 */
+  --color-bg-card: #ffffff;
+  --color-text: #222222; /* 更高对比度文本 */
+  --color-text-secondary: #7b7b7b;
+  --color-border: #e9e9ea;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --shadow-sm: 0 6px 18px rgba(16, 24, 40, 0.06);
+  --shadow-card: 0 8px 24px rgba(16, 24, 40, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 全局按钮风格 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+/* 卡片风格 */
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  padding: 12px;
+}
+
+/* 文本与间距基准 */
+h1,
+h2,
+h3 {
+  color: var(--color-text);
+  margin: 0;
+}
+p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* 小屏适配 */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  header {
+    padding: 10px;
+  }
+  .card {
+    border-radius: var(--radius-md);
+    padding: 10px;
+  }
+  .btn {
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+}
+
+/* 辅助样式，用于骨架和轻量阴影 */
+.muted {
+  color: var(--color-text-secondary);
+}
+.soft-border {
+  border: 1px solid var(--color-border);
+}
